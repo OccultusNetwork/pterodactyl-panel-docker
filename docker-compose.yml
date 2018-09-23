@@ -51,6 +51,7 @@ services:
       - "REDIS_PORT=6379"
       ## Domain settings
       - "APP_URL=https://panel.occultus.network"
+      - "TRUSTED_PROXIES=*"
       ## Timezone settings
       - "APP_TIMEZONE=America/New_York"
       ## Service egg settings
