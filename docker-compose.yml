@@ -2,6 +2,7 @@ version: '2'
 services:
   database:
     image: mariadb
+    restart: always
     volumes:
       - "./srv/database:/var/lib/mysql"
     environment:
@@ -13,10 +14,12 @@ services:
       - "MYSQL_PASSWORD=pterodbpass"
 
   cache:
+    restart: always
     image: redis:alpine
 
   panel:
     build: .
+    restart: always
     links:
       - database
       - cache
