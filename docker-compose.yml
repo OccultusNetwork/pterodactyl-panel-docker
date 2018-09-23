@@ -16,7 +16,7 @@ services:
     image: redis:alpine
 
   panel:
-    build: panel
+    build: .
     links:
       - database
       - cache
