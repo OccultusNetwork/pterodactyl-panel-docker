@@ -17,9 +17,6 @@ services:
 
   panel:
     build: panel
-    ports:
-      - "80:80"
-      - "443:443"
     links:
       - database
       - cache
@@ -79,4 +76,3 @@ networks:
   proxy:
     external:
       name: proxy
-
